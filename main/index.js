@@ -1,7 +1,9 @@
 ﻿const { Client, MessageMedia} = require('whatsapp-web.js');
-const MessagesToSend = require('./messages.js');
+
 const QRCode = require('qrcode');
-const ErrorMessages = require("./errormessages");
+const MessagesToSend = require("./messages/messages");
+const ErrorMessages = require("./messages/errormessages");
+
 
 
 
@@ -9,7 +11,7 @@ const client = new Client();
 
 client.on('qr', async qr => {
     console.log('Generating QR Code...');
-    await QRCode.toFile('Qr/qr.png', qr );
+    await QRCode.toFile('../Qr/qr.png', qr );
     console.log('QR saved to qr.png, open it and scan with WhatsApp.');
 });
 
@@ -22,7 +24,7 @@ const firstMessageTriggered = {};
 const day = 24*60*60*1000;
 
 
-const price = MessageMedia.fromFilePath('img/price/price.jpg')
+const price = MessageMedia.fromFilePath('../img/price/price.jpg')
 client.on('message', msg => {
 
 
@@ -48,7 +50,7 @@ client.on('message', msg => {
         client.sendMessage(msg.from, MessagesToSend[num]);
         if (num === 6) client.sendMessage(msg.from, price);
     } else if(num > Object.keys(MessagesToSend).length) {
-        client.sendMessage(msg.from, ErrorMessages.NoOptionExist)
+        client.sendMessage(msg.from,ErrorMessages.NoOptionExist)
     }
     else if (isNaN(num)){
         client.sendMessage(msg.from,ErrorMessages.NotValidRequest)
