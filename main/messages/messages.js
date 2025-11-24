@@ -59,10 +59,20 @@
         '    📍 Mapa: https://maps.app.goo.gl/aR3n8gZvCa8xRLYPA',
     
     
-    6: 'Te dejamos las tarifas para que elijas cómo quieres vivir la experiencia Colizeum. Consejo gamer: los packs de 3 y 5 horas están disponibles hasta las 20:00 😉'
+    6: 'Te dejamos las tarifas para que elijas cómo quieres vivir la experiencia Colizeum. Consejo gamer: los packs de 3 y 5 horas están disponibles hasta las 20:00 😉',
+    
+    
+    99:    `Para obtener la información de los siguientes puntos, escriba el número de la opción:
+
+1️⃣ Quienes somos
+2️⃣ Qué tipo de zonas tenéis y en qué se diferencian?
+3️⃣ Reservación
+4️⃣ Horario
+5️⃣ Dónde estamos
+6️⃣ Precios
+7️⃣ contactar con admin
+`
 };
 
 
 module.exports = MessagesToSend
- 
-

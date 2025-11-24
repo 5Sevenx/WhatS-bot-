@@ -5,8 +5,6 @@ const MessagesToSend = require("./messages/messages");
 const ErrorMessages = require("./messages/errormessages");
 
 
-
-
 const client = new Client();
 
 client.on('qr', async qr => {
@@ -23,7 +21,7 @@ client.on('ready', () => {
 const firstMessageTriggered = {};
 const day = 24*60*60*1000;
 
-
+const ContactAdminNum = process.env["CONTACT_NUMBER"] +'@c.us'
 const price = MessageMedia.fromFilePath('../img/price/price.jpg')
 client.on('message', msg => {
 
@@ -32,15 +30,7 @@ client.on('message', msg => {
     const lastSent = firstMessageTriggered[msg.from];
     
 
-    if(!lastSent || now - lastSent > day) {client.sendMessage(msg.from, `Para obtener la información de los siguientes puntos, escriba el número de la opción:
-
-1️⃣ Quienes somos
-2️⃣ Qué tipo de zonas tenéis y en qué se diferencian?
-3️⃣ Reservación
-4️⃣ Horario
-5️⃣ Dónde estamos
-6️⃣ Precios
-`);
+    if(!lastSent || now - lastSent > day) {client.sendMessage(msg.from, MessagesToSend["99"]);
         firstMessageTriggered[msg.from] = now;
         return;
     }
@@ -55,6 +45,14 @@ client.on('message', msg => {
     else if (isNaN(num)){
         client.sendMessage(msg.from,ErrorMessages.NotValidRequest)
     }
+
+    if (num === 7) {
+        client.sendMessage('39@c.us', `hola`);
+        client.sendMessage(msg.from, 'tu mensaje ha sido enviado al administrador');
+    }
+
+
+
 });
 
 
