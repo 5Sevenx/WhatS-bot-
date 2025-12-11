@@ -1,0 +1,22 @@
+2025/12/11-05:18:31.004 3764 Reusing MANIFEST C:\Users\qwert\WBot\main\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/12/11-05:18:31.004 3764 Recovering log #119
+2025/12/11-05:18:31.008 3764 Reusing old log C:\Users\qwert\WBot\main\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000119.log 
+2025/12/11-05:18:32.588 1480 Level-0 table #127: started
+2025/12/11-05:18:32.590 1480 Level-0 table #127: 35391 bytes OK
+2025/12/11-05:18:32.591 1480 Delete type=0 #119
+2025/12/11-05:18:32.592 1480 Manual compaction at level-0 from '\x00-\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00.\x00\x00\x00' @ 0 : 0; will stop at '\x00-\x00\x00\x05' @ 370522 : 1
+2025/12/11-05:18:32.592 1480 Compacting 1@0 + 1@1 files
+2025/12/11-05:18:32.603 1480 Generated table #128@0: 11999 keys, 245744 bytes
+2025/12/11-05:18:32.603 1480 Compacted 1@0 + 1@1 files => 245744 bytes
+2025/12/11-05:18:32.604 1480 compacted to: files[ 0 1 2 0 0 0 0 ]
+2025/12/11-05:18:32.604 1480 Delete type=2 #127
+2025/12/11-05:18:32.604 1480 Manual compaction at level-0 from '\x00-\x00\x00\x05' @ 370522 : 1 .. '\x00.\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/12/11-05:18:32.643 2de0 Compacting 1@1 + 2@2 files
+2025/12/11-05:18:32.684 2de0 Generated table #129@1: 29344 keys, 2200184 bytes
+2025/12/11-05:18:32.735 2de0 Generated table #130@1: 54877 keys, 1565858 bytes
+2025/12/11-05:18:32.735 2de0 Compacted 1@1 + 2@2 files => 3766042 bytes
+2025/12/11-05:18:32.736 2de0 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/12/11-05:18:32.736 2de0 Delete type=2 #122
+2025/12/11-05:18:32.736 2de0 Delete type=2 #123
+2025/12/11-05:18:32.736 2de0 Delete type=2 #124
+2025/12/11-05:18:32.736 2de0 Delete type=2 #128

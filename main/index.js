@@ -1,11 +1,14 @@
-﻿const { Client, MessageMedia} = require('whatsapp-web.js');
+﻿const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 
-const QRCode = require('qrcode');
+const QRCode= require('qrcode');
 const MessagesToSend = require("./messages/messages");
 const ErrorMessages = require("./messages/errormessages");
 
 
-const client = new Client();
+
+const client = new Client({
+    authStrategy: new LocalAuth()
+});
 
 client.on('qr', async qr => {
     console.log('Generating QR Code...');
@@ -13,9 +16,20 @@ client.on('qr', async qr => {
     console.log('QR saved to qr.png, open it and scan with WhatsApp.');
 });
 
+client.on("ready", () => {
+    console.log("Client is ready!");
+});
 
-client.on('ready', () => {
-    console.log('Client ready!');
+client.on("authenticated", () => {
+    console.log("Authenticated");
+});
+
+client.on("auth_failure", msg => {
+    console.error("Auth failed:", msg);
+});
+
+client.on("disconnected", (reason) => {
+    console.log("Client disconnected:", reason);
 });
 
 const firstMessageTriggered = {};
@@ -28,14 +42,14 @@ client.on('message', msg => {
 
     const now = Date.now();
     const lastSent = firstMessageTriggered[msg.from];
-    
+
 
     if(!lastSent || now - lastSent > day) {client.sendMessage(msg.from, MessagesToSend["99"]);
         firstMessageTriggered[msg.from] = now;
         return;
     }
     const num = parseInt(msg.body.trim());
-    
+
     if (!isNaN(num) && MessagesToSend[num]) {
         client.sendMessage(msg.from, MessagesToSend[num]);
         if (num === 6) client.sendMessage(msg.from, price);
@@ -47,12 +61,9 @@ client.on('message', msg => {
     }
 
     if (num === 7) {
-        client.sendMessage('39@c.us', `hola`);
+        client.sendMessage('3@c.us', `Mensaje de: ${msg.from}`);
         client.sendMessage(msg.from, 'tu mensaje ha sido enviado al administrador');
     }
-
-
-
 });
 
 

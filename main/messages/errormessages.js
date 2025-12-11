@@ -7,7 +7,9 @@
 3️⃣ Reservación
 4️⃣ Horario
 5️⃣ Dónde estamos
-6️⃣ Precios`,
+6️⃣ Precios
+7️⃣ Contactar con admin
+`,
 
 
     NotValidRequest:
@@ -18,7 +20,9 @@
 3️⃣ Reservación
 4️⃣ Horario
 5️⃣ Dónde estamos
-6️⃣ Precios`,
+6️⃣ Precios
+7️⃣ Contactar con admin
+`,
 }
 
 module.exports=ErrorMessages;

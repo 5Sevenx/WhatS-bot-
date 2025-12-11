@@ -44,7 +44,7 @@
         '- Incluye también los juegos mencionados anteriormente\n',
     
     
-    3: 'Para completar tu reserva, por favor escribe la *fecha exacta* dia/mes/hora(am/pm) \n Ejemplo: 11/11/11pm',
+    3: 'Para completar tu reserva, por favor entra en este enlace donde puedes realizar tu reserva:https://macolizeum.simplybook.it/v2/',
     
     
     4: '🎮 ¡En Colizeum no dormimos!\n' +
@@ -62,7 +62,7 @@
     6: 'Te dejamos las tarifas para que elijas cómo quieres vivir la experiencia Colizeum. Consejo gamer: los packs de 3 y 5 horas están disponibles hasta las 20:00 😉',
     
     
-    99:    `Para obtener la información de los siguientes puntos, escriba el número de la opción:
+    99:    `Hola! Soy bot del Cyber Club de Colizeum. elije una de las siguiente opcion sobre las que quieres obtener informacion:
 
 1️⃣ Quienes somos
 2️⃣ Qué tipo de zonas tenéis y en qué se diferencian?
@@ -70,7 +70,7 @@
 4️⃣ Horario
 5️⃣ Dónde estamos
 6️⃣ Precios
-7️⃣ contactar con admin
+7️⃣ Contactar con admin
 `
 };
 
